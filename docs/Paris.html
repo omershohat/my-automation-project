@@ -2,409 +2,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Paris Tourism</title>
+  <title>Paris Travel Guide</title>
   <style>
-    /* CSS Styles */
-    
-    /* Import Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    
-    /* Global Styles */
     body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
+      font-family: Arial, sans-serif;
     }
     
-    /* Gallery Styles */
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      padding: 50px;
+      margin-top: 50px;
     }
     
-    /* Map Styles */
-    iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
+    .gallery img {
+      width: calc(33.33% - 10px);
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
     }
     
-    /* Attractions Styles */
-    .attraction {
-      width: 25%;
-      margin: 20px;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-    
-    /* Attractions List Styles */
-    .attractions-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    
-    /* Carousel Styles */
-    .carousel {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    /* Header Styles */
-    .header {
-      display: flex;
-      align-items: center;
-      background-color: #f3f3f3;
-      padding: 50px;
-    }
-    
-    /* Footer Styles */
-    .footer {
-      display: flex;
-      align-items: center;
-      background-color: #f3f3f3;
-      padding: 50px;
-    }
-    
-    /* Carousel Styles */
-    .carousel-item {
-      width: 200px;
-      margin: 20px;
-    }
-    
-    /* Attractions Styles */
-    .attraction {
-      width: 250px;
-      margin: 20px;
-    }
-    
-    /* Gallery Styles */
-    .gallery-item {
-      width: 200px;
-      margin: 20px;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .carousel, .attractions, .gallery {
-        width: 100%;
-      }
-    }
-    
-    /* Typography Styles */
-    h1, h2, p {
-      color: #333;
-      font-family: 'Roboto', sans-serif;
-      padding: 20px;
-    }
-    
-    /* General Styles */
-    body {
-      font-family: 'Roboto', sans-serif;
-      font-size: 16px;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      body {
-        font-size: 14px;
-      }
-    }
-    
-    /* Gallery Styles */
-    .gallery-item {
-      width: 200px;
-      margin: 20px;
-    }
-    
-    /* Attractions Styles */
-    .attraction {
-      width: 250px;
-      margin: 20px;
-    }
-    
-    /* Carousel Styles */
-    .carousel-item {
-      width: 200px;
-      margin: 20px;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .carousel, .attractions, .gallery {
-        width: 100%;
-      }
-    }
-    
-    /* Typography Styles */
-    h1 {
-      font-size: 30px;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 24px;
-      }
-    }
-    
-    /* Gallery Styles */
-    .gallery-item {
-      width: 200px;
-      margin: 20px;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .gallery-item {
-        width: 100%;
-      }
-    }
-    
-    /* Attractions Styles */
-    .attraction {
-      width: 250px;
-      margin: 20px;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .attraction {
-        width: 100%;
-     }
-    }
-    
-    /* Carousel Styles */
-    .carousel-item {
-      width: 200px;
-      margin: 20px;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .carousel-item {
-        width: 100%;
-     }
-    }
-    
-    /* Typography Styles */
-    h1, h2 {
-      font-size: 24px;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      h1, h2 {
-       font-size: 20px;
-    }
-    
-    /* Map Styles */
     .map {
       width: 100%;
-     height: 400px;
+      height: 450px;
+      margin-top: 50px;
     }
     
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .map {
-        height: 300px;
+    .attractions h2 {
+      text-align: center;
+      margin-bottom: 30px;
     }
     
-    /* Attractions Styles */
-    .attraction {
-      width: 100%;
-      margin: 20px;
+    .attractions p {
+      text-align: justify;
+      margin-bottom: 20px;
     }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .attraction {
-        width: 100%;
-    }
-    
-    /* Footer Styles */
-    .footer {
-        font-size: 16px;
-    }
-    
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .footer {
-        font-size: 14px;
-    }
-```css
-body {
-  background: #fff;
-}
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-<title>Paris Tourism</title>
+  </style>
+</head>
 <body>
-<header>
-<h1>Welcome to Paris</h1>
-<main>
-<section class="attractions">
-<section class="attractions">
-<section class="map">
-<section class="map">
-<section class="attractions">
-<section class="attractions">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map"> 
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class="map">
-<section class="attractions">
-<section class
+  <header>
+    <h1>Paris Travel Guide</h1>
+  </header>
+  
+  <main>
+    <section class="gallery">
+      <img src="https://images.unsplash.com/photo-1576876218855-6f4f90c42a5a" alt="Paris Skyline">
+      <img src="https://images.unsplash.com/photo-1547245149962-263d3c689c1f" alt="Eiffel Tower">
+      <img src="https://images.unsplash.com/photo-1559570935996-b4f2e972353d" alt="Seine River">
+    </section>
+    
+    <section class="attractions">
+      <h2>Top Attractions in Paris</h2>
+      <p>Learn about the magic of Paris with its iconic landmarks and rich history.</p>
+      <p>1. Louvre Museum - A must-visit for art lovers.</p>
+      <p>2. Notre-Dame Cathedral - A historic masterpiece.</p>
+      <p>3. Eiffel Tower - A symbol of Paris.</p>
+      <p>4. Champs-Élysées - A popular shopping district.</p>
+      <p>5. Montmartre - A charming neighborhood.</p>
+    </section>
+    
+    <section class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m4!1shttps://www.google.com/maps/embed/v1/place?key=AIzaSyD_I50jXxjJXg!2m4!1e3!2m2!1d59.057922!2d2.304799!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!2b1!1d59.057922!2d2.304799!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f
