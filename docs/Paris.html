@@ -2,260 +2,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Paris: A Tourist's Guide</title>
+    <title>Paris: The City of Love</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
     <header>
-        <h1>Paris: A Tourist's Guide</h1>
-        <nav>
-            <ul>
-                <li><a href="#attractions">Attractions</a></li>
-                <li><a href="#map">Map</a></li>
-                <li><a href="#photos">Photos</a></li>
-            </ul>
-        </nav>
+        <h1>Paris: The City of Love</h1>
     </header>
-
     <main>
-        <section id="photos">
-            <h2>Photos of Paris</h2>
-            <div class="photo">
-                <img src="https://image.pollinations.ai/prompt/beautiful_view_1/" alt="Beautiful View of Paris">
-            </div>
-            <div class="photo">
-                <img src="https://image.pollinations.ai/prompt/view_2/" alt="Paris Skyline">
-            </div>
-            <div class="photo">
-                <img src="https://image.pollinations.ai/prompt/view_3/" alt="Eiffel Tower">
-            </div>
+        <section>
+            <h2>Paris Attractions</h2>
+            <ul>
+                <li><a href="#view_1"><img src="https://image.pollinations.ai/prompt/beautiful_view_1_Paris?width=800&height=400" alt="Beautiful View 1 - Eiffel Tower"></a></li>
+                <li><a href="#view_2"><img src="https://image.pollinations.ai/prompt/beautiful_view_2_Paris?width=800&height=400" alt="Beautiful View 2 - Seine River"></a></li>
+                <li><a href="#view_3"><img src="https://image.pollinations.ai/prompt/beautiful_view_3_Paris?width=800&height=400" alt="Beautiful View 3 - Montmartre"></a></li>
+            </ul>
         </section>
-
         <section id="attractions">
-            <h2>Things to Do in Paris</h2>
-            <p>Explore the city's rich history and culture by visiting iconic landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.</p>
-            <h3>Eiffel Tower</h3>
-            <p>Admire the stunning view from the top of the Eiffel Tower, the world's most visited paid monument.</p>
-            <h3>Louvre Museum</h3>
-            <p>Visit the Louvre Museum to see the famous Mona Lisa painting and thousands of other works of art.</p>
-            <h3>Notre-Dame Cathedral</h3>
-            <p>Wander through the stunning Notre-Dame Cathedral, a UNESCO World Heritage Site.</p>
+            <h2>Recommended Attractions</h2>
+            <ul>
+                <li><a href="#attraction_1"><img src="https://image.pollinations.ai/prompt/attraction_1_Paris?width=800&height=400" alt="Attraction 1 - Louvre Museum"></a></li>
+                <li><a href="#attraction_2"><img src="https://image.pollinations.ai/prompt/attraction_2_Paris?width=800&height=400" alt="Attraction 2 - Notre-Dame Cathedral"></a></li>
+                <li><a href="#attraction_3"><img src="https://image.pollinations.ai/prompt/attraction_3_Paris?width=800&height=400" alt="Attraction 3 - Eiffel Tower"></a></li>
+            </ul>
         </section>
-
         <section id="map">
-            <h2>Discover Paris on a Map</h2>
-            <div id="map-canvas"></div>
-            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-            <script src="paris.js"></script>
-        </section>
-    </main>
-</body>
-</html>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-}
-
-.photo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.photo img {
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-}
-
-#map-canvas {
-    width: 100%;
-    height: 400px;
-    background-color: #f2f2f2;
-}
-</style>
-
-<script>
-L.mapbox.accessToken = 'pk.eyJ1iZWNhZmFjZWJhZ2FmZiIsImF1ZCI6ImJhY2NhZmQifQ.qtCqJzH7Qj59QmZyW9Yw';
-
-L.mapboxgl.accessToken = 'pk.eyJ1cmYyYWJjZWJhZmQiOiJiYWNhZmQifQ.l-7Qj59QmZyW9Yw';
-
-function initMap() {
-    var map = L.mapboxgl('map').setView([48.8594, 2.2948], 13);
-    var marker = L.marker([48.8594, 2.2948], {icon: L.Icon.Default()}).addTo(map);
-}
-
-window.onload = initMap;
-</script>
-
-<main>
-    <section id="attractions">
-        <h2>Attractions in Paris</h2>
-        <p>Discover the beauty of Paris by visiting the Louvre Museum, Arc de Triomphe, and Palace of Versailles.</p>
-    </section>
-
-    <section id="map">
-        <h2>Explore Paris on a Map</h2>
-        <div id="map-canvas"></div>
-    </section>
-</main>
-</html>
-```css
-#map {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#map-canvas {
-    width: 100%;
-    height: 400px;
-    background-color: #f2f2f2;
-}
-```
-```html
-<div id="attractions">
-    <h2>Attractions in Paris</h2>
-    <p>Discover the beauty of Paris by visiting the Louvre Museum, Arc de Triomphe, and Palace of Versailles.</p>
-</div>
-```
-```html
-<div id="map">
-    <h2>Explore Paris on a Map</h2>
-    <div id="map-canvas"></div>
-</div>
-```html
-```css
-#map {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#map-canvas {
-    width: 100%;
-    height: 400px;
-    background-color: #f2f2f2;
-}
-```html
-<main>
-    <section id="attractions">
-        <h2>Attractions in Paris</h2>
-        <p>Discover the beauty of Paris by visiting the Louvre Museum, Arc de Triomphe, and Palace of Versailles.</p>
-    </section>
-    <section id="map">
-        <h2>Explore Paris on a Map</h2>
-        <div id="map-canvas"></div>
-    </section>
-</main>
-```html
-<script src="https://unpkg.com/leaflet@1.8.0.0/dist/leaflet.js"></script>
-<script src="paris.js"></script>
-```
-```javascript
-L.TileLayer.Image('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: 'Map data © OpenStreetMap contributors'
-}).addTo(map);
-```javascript
-```html
-<script>
-initMap();
-</script>
-```javascript
-function initMap() {
-    var map = L.mapbox.mapbox.com/v5.0.0/{z}/{x}/{y}.png', {
-    attribution: 'Map data © Mapbox'
-}).addTo(map);
-```javascript
-```html
-<script src="paris.js"></script>
-```css
-#attractions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-```html
-<script>
-initMap();
-</script>
-```javascript
-function initMap() {
-    var map = L.mapbox.com/v5.0.0/{z}/{x}/{y}.png', {
-       attribution: 'Map data © Mapbox'
-}).addTo(map);
-```css
-#map {
-    display: flex;
-    flex-direction: column;
-      align-items: center;
-}
-```html
-<script>
-initMap();
-</script>
-```javascript
-function initMap() {
-    var map = L.mapbox.com/v5.0.0/{z}/{x}/{y}.png', {
-        attribution: 'Map data © Mapbox'
-}).addTo(map);
-```css
-#attractions {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-}
-```html
-<script>
-initMap();
-</script>
-```javascript
-function initMap() {
-     var map = L.mapbox.com/v5.0.0/{z}/{x}/{y}.png', {
-      attribution: 'Map data © Mapbox'
-}).addTo(map);
-```css
-#map {
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-```html
-<script>
-initMap();
-</script>
-```javascript
-function initMap() {
-     var map = L.mapbox.com/v5.0/{z}/{x}/{y}.png', {
-    attribution: 'Map data © Mapbox'
-}).addTo(map);
-```css
-#attractions {
-    display: flex;
-    flex-direction: column;
-   align-items: center;
-}
-```html
-<script src="paris.js"></script>
-```javascript
-function initMap() {
-  var map = L.mapbox.com/v5.0/{z}/{x}/{y}.png', {
-   attribution: 'Map data © Mapbox'
-}).addTo(map);
-```css
-#map {
-   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-```html
-```css
-```javascript
-```html
-```html
-```css 
+            <h2>Explore Paris</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m4!1shttps://www.google.com/maps/place/Louvre+Museum/@48.8583032,2.3516355,17z&amp;q=Louvre+Museum&amp;zoom=15&amp;layer=c&amp;output=embed
+            <br>
+            <br>
+            <iframe width="700" height="400" style="border:0; margin: 0 auto;" frameborder="0" scrolling="no"></iframe>
+            <br>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m4!1shttps://www.google.com/maps/place/Notre+Dame+Cathedral/@48.8583032,2.3516355,17z&amp;q=Notre+Dame+Cathedral&amp;output=embed&amp;zoom=15&amp;layer=c&amp;amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&amp;ie=UTF8&amp;iwloc=Berlin,Germany&amp;output=embed&amp;zoom=15&amp;layer=c&amp;hl=en&
