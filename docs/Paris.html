@@ -1,99 +1,78 @@
-```html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Paris Attractions</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5VIYh5EQ==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5VIYh5EQ==" crossorigin=""></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+  <title>Paris: A City of Love</title>
+  <style>
+    /* Add more color to the page */
+    body {
+      background-color: #F5F5DC;
+    }
 
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 100vh;
-        }
+    /* Add some margin to the images and text */
+    img, p {
+      margin: 2em;
+    }
 
-        .attraction-item {
-            margin-bottom: 30px;
-            text-align: center;
-        }
+    /* Adjust the font size and color */
+    h1, h2, h3, p {
+      font-size: 1.2em;
+      color: #444;
+    }
 
-        .attraction-item img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 10px;
-        }
-
-        .attraction-item h3 {
-            font-size: 1.2em;
-        }
-
-        .attraction-item p {
-            font-size: 0.9em;
-        }
-    </style>
+    /* Add some spacing between the sections */
+    section {
+      padding: 2em;
+    }
+  </style>
 </head>
 <body>
-    <h1>Paris Attractions</h1>
-    <div id="map"></div>
-    <div id="attractions">
-        <h2>Top Attractions in Paris</h2>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20Eiffel%20Tower%20view%201" alt="Eiffel Tower">
-            <h3>Eiffel Tower</h3>
-            <p>The iconic Eiffel Tower is a must-see attraction in Paris. Admire the stunning view from the top of the tower or take a stroll around its base. The tower was built for the 1889 World's Fair and remains a symbol of Paris to this day.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20Mont%20Sainte-Chapelle%20view%201" alt="Mont Sainte-Chapelle">
-            <h3>Mont Sainte-Chapelle</h3>
-            <p>Visit the stunning Mont Sainte-Chapelle, a medieval Gothic cathedral that showcases the finest examples of Gothic architecture. Be amazed by the intricate details and stunning views.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20Notre%20Dame%20view%201" alt="Notre Dame">
-            <h3>Notre-Dame de Paris</h3>
-            <p>Explore the historic Notre-Dame de Paris, a UNESCO World Heritage Site and a masterpiece of Gothic architecture. Don't miss the stunning views from the towers.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20Champs%20Elys%C3%A9es%20view%201" alt="Champs Elysées">
-            <h3>Champs-Élysées</h3>
-            <p>Walk along the picturesque Champs-Élysées avenue, lined with elegant shops, cafes, and historical landmarks. Enjoy the bustling atmosphere and beautiful architecture.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20Seine%20River%20view%201" alt="Seine River">
-            <h3>Seine River</h3>
-            <p>Take a stroll along the Seine River, which winds through the heart of Paris, and admire the city's skyline. Don't forget to snap a photo with the Eiffel Tower in the background.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20Arc%20de%20Trompe%20l%C3%A8oiel%20view%201" alt="Arc de Triomphe">
-            <h3>Arc de Triomphe</h3>
-            <p>Visit the iconic Arc de Triomphe, a triumphal arch built in honor of French victories. Enjoy the stunning view of the city from the top of the arch.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20Mont%20Sorbonne%20view%201" alt="Montmartre">
-            <h3>Montmartre</h3>
-            <p>Explore the charming neighborhood of Montmartre, known for its bohemian atmosphere and stunning views of the city. Visit the Sacré-Cœur Basilica for a panoramic view.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20Eiffel%20Tower%20view%201" alt="Eiffel Tower">
-            <h3>Eiffel Tower</h3>
-            <p>Climb to the top of the Eiffel Tower for a breathtaking view of the city and the Seine river.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20Lou%20Victor%20Haussmann%20view%201" alt="Louvre Museum">
-            <h3>Louvre Museum</h3>
-            <p>Visit the Louvre Museum to admire the world's finest art collection.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20Mont%20Eiffel%20Tower%20view%201" alt="Montmartre">
-            <h3>Montmartre</h3>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+
+<!-- Header and navigation bar -->
+<header>
+  <h1>Paris: A City of Love</h1>
+  <nav>
+    <ul>
+      <li><a href="#attractions">Attractions</a></li>
+      <li><a href="#map">Map</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main content section -->
+<section id="main">
+
+  <!-- Images of Paris -->
+  <h2>Images of Paris</h2>
+  <section id="images">
+    <!-- Add the images using the img tag -->
+    <img src="https://image.pollinations.ai/prompt/Paris%20view%201" alt="Beautiful view of Paris">
+    <img src="https://image.pollinations.ai/prompt/Paris%20view%202" alt="Sunset over the Seine">
+    <img src="https://image.pollinations.ai/prompt/Paris%20view%203" alt="Champs-Élysées at night">
+  </section>
+
+  <!-- Attractions in Paris -->
+  <h2>Recommended Attractions in Paris</h2>
+  <section id="attractions">
+    <h3>1. Louvre Museum</h3>
+    <p>Explore the world's largest art museum and one of the most visited museums in the world.</p>
+    <hr>
+    <h3>2. Notre-Dame Cathedral</h3>
+    <p>Visit the historic and iconic Notre-Dame Cathedral, a UNESCO World Heritage Site.</p>
+    <hr>
+    <h3>3. Eiffel Tower</h3>
+    <p>See the famous Eiffel Tower, a global icon and symbol of Paris.</p>
+    <hr>
+    <h3>4. Montmartre</h3>
+    <p>Explore the charming Montmartre neighborhood, home to the famous Moulin Rouge and Sacré-Cœur Basilica.</p>
+    <hr>
+    <h3>5. Champs-Élysées</h3>
+    <p>Wander along the famous Champs-Élysées avenue, lined with luxury shops and the Arc de Triomphe.</p>
+  </section>
+
+  <!-- Map of Paris -->
+  <h2>Map of Paris</h2>
+  <section id="map">
+    <h3>Click on the map to explore Paris</h3>
+    <img src="https://maps.googleapis.com/maps/api/staticmap?center=48.858405,2.294500&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&markers=color:blue|icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:https://www.google.com/maps/@48.858405,2.294500,15z&zoom=15&size=600x400&maptype=terrain&markers=icon:">
+
+<div id="
