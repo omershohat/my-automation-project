@@ -1,94 +1,65 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Paris: A Tourist's Guide</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Paris: A City of Love and Wonders</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Paris: A City of Love and Wonders</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Discover the magic of Paris</h2>
+            <p>Imagine wandering through the charming streets of Paris, admiring the enchanting architecture, and experiencing the rich history and culture. This beautiful city is a must-visit destination for travelers seeking love, inspiration, and unforgettable memories. Get ready to fall in love with Paris!</p>
+        </section>
 
-<!-- Header Section -->
-<header>
-  <h1>Welcome to Paris: A Tourist's Guide</h1>
-</header>
+        <section class="attractions">
+            <h2>Top Attractions in Paris</h2>
+            <article>
+                <h3>Eiffel Tower</h3>
+                <img src="https://image.pollinations.ai/prompt/Eiffel_Tower%20Paris?width=800&height=600" alt="Eiffel Tower in Paris">
+                <p>Standing tall and proud, the Eiffel Tower is a symbol of Paris and one of the most recognizable landmarks in the world. Visit this iconic structure and enjoy the breathtaking views from its observation decks.</p>
+            </article>
 
-<!-- Main Section -->
-<main>
+            <article>
+                <h3>Montmartre</h3>
+                <img src="https://image.pollinations.ai/prompt/Montmartre%20Paris?width=800&height=600" alt="Montmartre in Paris">
+                <p>Explore the charming neighborhood of Montmartre, where artists and bohemians used to gather. Walk along the picturesque streets, visit the Sacré-Cœur Basilica, and soak in the local atmosphere.</p>
+            </article>
 
-  <!-- Images Section -->
-  <section class="images">
-    <img src="https://image.pollinations.ai/prompt/Paris%20view%201" alt="Paris Image 1">
-    <img src="https://image.pollinations.ai/prompt/Paris%20view%202" alt="Paris Image 2">
-    <img src="https://image.pollinations.ai/prompt/Paris%20view%203" alt="Paris Image 3">
-  </section>
+            <article>
+                <h3>Louvre Museum</h3>
+                <img src="https://image.pollinations.ai/prompt/Louvre_Museum_Paris?width=800&height=600" alt="Louvre Museum in Paris">
+                <p>Step into the world of art and history at the Louvre Museum, home to the famous Mona Lisa painting and thousands of other masterpieces. Spend a day exploring this iconic museum and discover the treasures of human creativity.</p>
+            </article>
 
-  <!-- Attractions Section -->
-  <section class="attractions">
-    <h2>Top Attractions in Paris</h2>
-    <ul>
-      <li>Eiffel Tower</li>
-      <li>Notre-Dame Cathedral</li>
-      <li>Sacré-Cœur Basilica</li>
-    </ul>
-  </section>
+            <article>
+                <h3>Notre-Dame Cathedral</h3>
+                <img src="https://image.pollinations.ai/prompt/Notre-Dame_Cathedral_Paris?width=800&height=600" alt="Notre-Dame Cathedral in Paris">
+                <p>Visit the magnificent Notre-Dame Cathedral, a symbol of Parisian architecture and history. Explore the stunning gothic-style cathedral and admire the intricate details and historical significance.</p>
+            </article>
 
-  <!-- Map Section -->
-  <section class="map">
-    <h2>Explore Paris with Leaflet.js</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.385557743058!2d2.3571634155232956!3d48.85811777931022!2m3!1f0!2f0!3f0!3m2!1i1024!2i700!4f13.1!3m3!1m2!1s0x47e695f9d8a6c2d5%3A0x4828f0f4c899d1f7!2sParis!5e0!3m2!1sen!2sus!4v1642332434716!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" aria-label="Paris Map"></iframe>
-  </section>
+            <article>
+                <h3>Seine River Cruise</h3>
+                <img src="https://image.pollinations.ai/prompt/Seine_River_Paris?width=800&height=600" alt="Seine River Cruise in Paris">
+                <p>Take a serene Seine River cruise to admire the city from a unique perspective. Enjoy the picturesque views of Parisian landmarks as you glide along the river.</p>
+            </article>
+        </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>Designed by AI Assistant</p>
-  </footer>
-</body>
-</html>
+        <section class="attractions">
+            <h2>Attractions</h2>
+            <ul>
+                <li><a href="attraction_1.html">Louvre Museum</a></li>
+                <li><a href="attraction_2.html">Champs-Élysées</a></li>
+                <li><a href="attraction_3.html">Château de Versailles</a></li>
+                <li><a href="attraction_4.html">Sacré-Cœur Basilica</a></li>
+                <li><a href="attraction_5.html">Parc des Buttes-Chaumont</a></li>
+            </ul>
+        </section>
 
-<style>
-/* CSS Styles */
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #f2f2f2;
-  padding: 30px;
-  text-align: center;
-}
-
-.images img {
-  display: inline-block;
-  margin: 0 20px;
-}
-
-.attractions h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.attractions ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.attractions li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.map {
-  height: 400px;
-  width: 100%;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f2f2f2;
-}
-</style>
-
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-y8nJf5cQxV5BtJEHXAjKpOzNzQKjl7FbHJWxZv7IqfKjJ40ywW5vqJ678gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wf
+        <section class="map">
+            <h2>Map</h2>
+            <p>Plan your visit by exploring the city on a map:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m8!1m4!1m3!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1m2!1
