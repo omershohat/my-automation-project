@@ -1,113 +1,130 @@
-To create an HTML page for the destination Paris with three beautiful images, recommended attractions, and a Leaflet.js map with markers, please refer to the provided code example below:
+To create a standalone HTML page for the destination Paris, I will include the requested elements: beautiful images, recommended attractions, and a Leaflet.js map with markers. Here is the HTML code:
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Paris Attractions</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
-        #map {
-            height: 500px;
-            width: 100%;
+        body {
+            background-color: #f5f5f5;
         }
 
-        .attraction-item {
-            padding: 10px;
-            border-radius: 10px;
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+            padding: 20px;
+        }
+
+        .attraction {
+            background-color: #fff;
+            padding: 20px;
             margin-bottom: 20px;
         }
 
-        .attraction-item img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+        .map {
+            height: 400px;
         }
     </style>
 </head>
 <body>
-    <h1>Paris Attractions</h1>
-    <h2>Explore the Beautiful City of Paris</h2>
-    <div id="map"></div>
-    <div class="attractions-container">
-        <h2>Attractions</h2>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%201" alt="Eiffel Tower">
+    <div class="container">
+        <h1>Paris Attractions</h1>
+
+        <img src="https://image.pollinations.ai/prompt/Paris%20view%201" alt="Paris Image">
+        <img src="https://image.pollinations.ai/prompt/Paris%20view%202" alt="Paris Image">
+        <img src="https://image.pollinations.ai/prompt/Paris%20view%203" alt="Paris Image">
+
+        <h2>Paris Attractions</h2>
+
+        <div class="attraction">
             <h3>Eiffel Tower</h3>
-            <p>A stunning symbol of Paris, the Eiffel Tower offers breathtaking views of the city.</p>
+            <p>Visit the iconic Eiffel Tower, a must-see attraction in Paris.</p>
         </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%202" alt="Notre-Dame Cathedral">
+
+        <div class="attraction">
+            <h3>Montmartre</h3>
+            <p>Explore the charming Montmartre neighborhood, known for its art and history.</p>
+        </div>
+
+        <div class="attraction">
+            <h3>Seine River Cruise</h3>
+            <p>Enjoy a relaxing cruise along the Seine River to admire the city's landmarks.</p>
+        </div>
+
+        <div class="attraction">
             <h3>Notre-Dame Cathedral</h3>
-            <p>Visit the historic Notre-Dame Cathedral, a UNESCO World Heritage Site.</p>
+            <p>Visit the stunning Notre-Dame Cathedral, a historic landmark in Paris.</p>
         </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%203" alt="Montmartre">
-            <h3>Montmartre</h3>
-            <p>Experience the charming neighborhood of Montmartre, known for its artistic heritage.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%204" alt="Champs-Élysées">
+
+        <div class="attraction">
             <h3>Champs-Élysées</h3>
-            <p>Walk down the famous Champs-Élysées avenue, lined with shops, cafes, and cinemas.</p>
+            <p>Explore the famous Champs-Élysées, a bustling avenue with shops, restaurants, and cinemas.</p>
         </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%205" alt="Seine River">
-            <h3>Seine River</h3>
-            <p>Take a stroll along the Seine River, which runs through the heart of Paris.</p>
+
+        <div class="attraction">
+            <h3>Sacré-Cœur Basilica</h3>
+            <p>Admire the stunning Sacré-Cœur Basilica, a beautiful church with panoramic views.</p>
         </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%206" alt="Montparnasse Tower">
-            <h3>Montparnasse Tower</h3>
-            <p>Visit the Montparnasse Tower, an iconic landmark offering a stunning view of Paris.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%207" alt="Square des Innocents">
-            <h3>Square des Innocents</h3>
-            <p>Explore the historic Square des Innocents, once a central market place.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%208" alt="Square des Innocents">
-            <h3>Square des Innocents</h3>
-            <p>Discover the charming Square des Innocents, a historic market place.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%209" alt="Eiffel Tower">
-            <h3>Eiffel Tower</h3>
-            <p>Admire the iconic Eiffel Tower, a must-visit attraction in Paris.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%2010" alt="Seine River">
-            <h3>Seine River</h3>
-            <p>Take a stroll along the Seine River, a picturesque spot to enjoy Paris.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%2011" alt="Montmartre">
-            <h3>Montmartre</h3>
-            <p>Explore the picturesque neighborhood of Montmartre, known for its artists and bohemian atmosphere.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%2012" alt="Louvre Museum">
+
+        <div class="attraction">
             <h3>Louvre Museum</h3>
-            <p>Visit the world-famous Louvre Museum, home to the Mona Lisa.</p>
+            <p>Visit the world-renowned Louvre Museum, home to the Mona Lisa.</p>
         </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%2013" alt="Champs-Élysées">
-            <h3>Champs-Élysées</h3>
-            <p>Explore the famous Champs-Élysées, a popular shopping and dining destination.</p>
+
+        <div class="attraction">
+            <h3>Montmartre</h3>
+            <p>Explore the picturesque Montmartre neighborhood, known for its artists and charming streets.</p>
         </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%2014" alt="Square des Tuileries">
-            <h3>Square des Tuileries</h3>
-            <p>Visit the beautiful Square des Tuileries, near the Louvre Museum.</p>
-        </div>
-        <div class="attraction-item">
-            <img src="https://image.pollinations.ai/prompt/Paris%20view%2015" alt="Champs-Élysées">
-            <h3>Champs-Élysées</h3>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
+        <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"></script>
+        <script src="https://cdn.jsdelivr.net/npm/leaflet-markercluster@2.1.0/dist/leaflet.markercluster.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/leaflet-markercluster@2.1.0/dist/leaflet.markercluster.css"></script>
+
+        <div id="map"></div>
+
+        <script>
+            var attractions = [
+                {
+                    title: 'Eiffel Tower',
+                    icon: 'https://cdn.jsdelivr.net/npm/leaflet-markercluster@2.1.0/dist/leaflet.markercluster-marker.png',
+                    lat: 48.8584,
+                    lng: 2.2922
+            },
+            {
+                title: 'Montmartre',
+                icon: 'https://cdn.jsdelivr.net/npm/leaflet-markercluster@2.1.0/dist/leaflet.markercluster-marker.png',
+                lat: 48.8505,
+                lng: 2.3438
+            },
+            {
+                title: 'Louvre Museum',
+                icon: 'https://cdn.jsdelivr.net/npm/leaflet-markercluster@2.1.0/dist/leaflet.markercluster-marker.png',
+                lat: 48.8505,
+                lng: 2.3438
+            },
+            {
+                title: 'Orangerie Museum',
+                icon: 'https://cdn.jsdelivr.net/npm/leaflet-markercluster@2.1.0/dist/leaflet.markercluster-marker.png',
+                lat: 48.8505,
+                lng: 2.3438
+            },
+            {
+                title: 'Sainte-Chapelle',
+                icon: 'https://cdn.jsdelivr.net/npm/leaflet-markercluster@2.1.0/dist/leaflet.markercluster-marker.png',
+                lat: 48.8505,
+                lng: 2.3438
+        },
+        {
+            title: 'Musée d\'Orsay',
+            icon: 'https://cdn.jsdelivr.net/npm/leaflet-markercluster@2.1.0/dist/leaflet.markercluster-marker.png',
+            lat: 48.8505,
+            lng: 2.3438
+        },
+        {
+            title: 'Parc des Buttes-Chaumont',
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
