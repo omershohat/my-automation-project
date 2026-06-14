@@ -1,96 +1,113 @@
-To create an HTML page for the destination Paris, I will include the following elements:
-
-1. Three beautiful images using the provided image source.
-2. Recommended attractions for Paris.
-3. A Leaflet.js map with markers.
-
-Here is the raw HTML code for the Paris webpage:
+To create an HTML page for the destination Paris with three beautiful images, recommended attractions, and a Leaflet.js map with markers, please refer to the provided code example below:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Paris Attractions</title>
-  <style>
-    /* Add your own CSS styles here */
+    <title>Paris Attractions</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
 
-    /* To apply more colors, consider using a CSS framework like Bootstrap or Materialize */
+        .attraction-item {
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
 
-    /* Add your own custom styles for the attractions section */
+        .attraction-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
 
-    /* Add your own custom styles for the map section */
-
-    /* Add your own custom styles for the footer section */
-
-  </style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-
-  <header>
     <h1>Paris Attractions</h1>
-  </header>
-
-  <main>
-    <section>
-      <h2>Beautiful Images of Paris</h2>
-      <div class="images">
-        <!-- Add images here -->
-      </div>
-    </section>
-
-    <section>
-      <h2>Recommended Attractions in Paris</h2>
-      <ul>
-        <!-- Add attraction list here -->
-      </ul>
-    </section>
-
-    <section>
-      <h2>Visit Paris with Leaflet.js Map</h2>
-      <div id="map"></div>
-      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-      <script src="paris_map.js"></script>
-    </section>
-  </main>
-
-  <footer>
-    <!-- Add your own footer content here -->
-  </footer>
-
-</body>
-</html>
-```
-
-You can customize the CSS styles and JavaScript code in the provided sections to fit your needs and preferences. Don't forget to include your own content in the `footer` section.
-
-Please note that you'll need to include Leaflet.js and the Paris map script (`paris_map.js`) to display the map. You can copy and save the JavaScript code snippet below as `paris_map.js` file and include it in the `<script>` tag inside the `<section>` element:
-
-```javascript
-// Leaflet map code goes here
-```
-
-Remember to replace the `// Leaflet map code goes here` comment with the actual Leaflet map code that displays the attractions in Paris. Here is an example of how the JavaScript code might look like:
-
-```javascript
-// Replace the code below with your Leaflet map code
-
-// Load the Leaflet library
-var map = L.map('map').setView([48.8566, 2.3522], 13);
-
-// Add a tiles layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-// Add markers for attractions
-var attraction1 = L.marker([48.8593, 2.3479]).addTo(map);
-var attraction2 = L.marker([48.8559, 2.3521]).addTo(map);
-var attraction3 = L.marker([48.8560, 2.3520]).addTo(map);
-
-// Add a popup for each attraction marker
-attraction1.bindPopup('<h3>Eiffel Tower</h3><p>The iconic Eiffel Tower is a must-see attraction in Paris.</p>');
-attraction2.bindPopup('<h3>Notre-Dame Cathedral</h3><p>Visit the stunning Notre-Dame Cathedral in Paris.</p>');
-attraction3.bindPopup('<h3>Sacré-Cœur Basilica</h3><p>Experience the beauty of Sacré-Cœur Basilica in Paris.</p>');
-
-// Customize the popup content for each attraction marker
-``` 
+    <h2>Explore the Beautiful City of Paris</h2>
+    <div id="map"></div>
+    <div class="attractions-container">
+        <h2>Attractions</h2>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%201" alt="Eiffel Tower">
+            <h3>Eiffel Tower</h3>
+            <p>A stunning symbol of Paris, the Eiffel Tower offers breathtaking views of the city.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%202" alt="Notre-Dame Cathedral">
+            <h3>Notre-Dame Cathedral</h3>
+            <p>Visit the historic Notre-Dame Cathedral, a UNESCO World Heritage Site.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%203" alt="Montmartre">
+            <h3>Montmartre</h3>
+            <p>Experience the charming neighborhood of Montmartre, known for its artistic heritage.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%204" alt="Champs-Élysées">
+            <h3>Champs-Élysées</h3>
+            <p>Walk down the famous Champs-Élysées avenue, lined with shops, cafes, and cinemas.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%205" alt="Seine River">
+            <h3>Seine River</h3>
+            <p>Take a stroll along the Seine River, which runs through the heart of Paris.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%206" alt="Montparnasse Tower">
+            <h3>Montparnasse Tower</h3>
+            <p>Visit the Montparnasse Tower, an iconic landmark offering a stunning view of Paris.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%207" alt="Square des Innocents">
+            <h3>Square des Innocents</h3>
+            <p>Explore the historic Square des Innocents, once a central market place.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%208" alt="Square des Innocents">
+            <h3>Square des Innocents</h3>
+            <p>Discover the charming Square des Innocents, a historic market place.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%209" alt="Eiffel Tower">
+            <h3>Eiffel Tower</h3>
+            <p>Admire the iconic Eiffel Tower, a must-visit attraction in Paris.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%2010" alt="Seine River">
+            <h3>Seine River</h3>
+            <p>Take a stroll along the Seine River, a picturesque spot to enjoy Paris.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%2011" alt="Montmartre">
+            <h3>Montmartre</h3>
+            <p>Explore the picturesque neighborhood of Montmartre, known for its artists and bohemian atmosphere.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%2012" alt="Louvre Museum">
+            <h3>Louvre Museum</h3>
+            <p>Visit the world-famous Louvre Museum, home to the Mona Lisa.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%2013" alt="Champs-Élysées">
+            <h3>Champs-Élysées</h3>
+            <p>Explore the famous Champs-Élysées, a popular shopping and dining destination.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%2014" alt="Square des Tuileries">
+            <h3>Square des Tuileries</h3>
+            <p>Visit the beautiful Square des Tuileries, near the Louvre Museum.</p>
+        </div>
+        <div class="attraction-item">
+            <img src="https://image.pollinations.ai/prompt/Paris%20view%2015" alt="Champs-Élysées">
+            <h3>Champs-Élysées</h3>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
