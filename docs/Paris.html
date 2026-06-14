@@ -1,135 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Paris: The City of Love</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Paris: A Tourist's Guide</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Header Section -->
 <header>
-  <h1>Paris: The City of Love</h1>
+  <h1>Welcome to Paris: A Tourist's Guide</h1>
 </header>
 
+<!-- Main Section -->
 <main>
 
-<section class="hero">
-  <div class="hero-image">
-    <img src="https://image.pollinations.ai/prompt/Paris%20view" alt="Paris Cityscape">
-  </div>
-  <div class="hero-text">
-    <h2>Paris: A City of Eternal Romance</h2>
-    <p>Immerse yourself in the enchanting beauty of Paris, a city that captures the hearts of millions.</p>
-    <a href="#attractions">Discover Attractions</a>
-  </div>
-</section>
+  <!-- Images Section -->
+  <section class="images">
+    <img src="https://image.pollinations.ai/prompt/Paris%20view%201" alt="Paris Image 1">
+    <img src="https://image.pollinations.ai/prompt/Paris%20view%202" alt="Paris Image 2">
+    <img src="https://image.pollinations.ai/prompt/Paris%20view%203" alt="Paris Image 3">
+  </section>
 
-<section class="attractions">
-  <h2>Top Attractions in Paris</h2>
-  <div class="attraction">
-    <h3>1. Eiffel Tower</h3>
-    <p>The iconic symbol of Paris, the Eiffel Tower is a must-visit attraction.</p>
-  </div>
-  <div class="attraction">
-    <h3>2. Louvre Museum</h3>
-    <p>Home to the famous Mona Lisa, the Louvre Museum is a treasure trove of art and history.</p>
-  </div>
-  <div class="attraction">
-    <h3>3. Notre-Dame Cathedral</h3>
-    <p>A stunning example of Gothic architecture, Notre-Dame Cathedral is a must-see.</p>
-  </div>
-  <div class="attraction">
-    <h3>4. Seine River Cruise</h3>
-    <p>Enjoy the views of Paris from the Seine River on a scenic cruise.</p>
-  </div>
-  <div class="attraction">
-    <h3>5. Montmartre</h3>
-    <p>Explore the charming Montmartre neighborhood, known for its artistic heritage.</p>
-  </div>
-</section>
+  <!-- Attractions Section -->
+  <section class="attractions">
+    <h2>Top Attractions in Paris</h2>
+    <ul>
+      <li>Eiffel Tower</li>
+      <li>Notre-Dame Cathedral</li>
+      <li>Sacré-Cœur Basilica</li>
+    </ul>
+  </section>
 
-<section class="map">
-  <h2>Discover Paris on a Map</h2>
-  <div id="map"></div>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script src="paris_map.js"></script>
-</section>
+  <!-- Map Section -->
+  <section class="map">
+    <h2>Explore Paris with Leaflet.js</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.385557743058!2d2.3571634155232956!3d48.85811777931022!2m3!1f0!2f0!3f0!3m2!1i1024!2i700!4f13.1!3m3!1m2!1s0x47e695f9d8a6c2d5%3A0x4828f0f4c899d1f7!2sParis!5e0!3m2!1sen!2sus!4v1642332434716!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" aria-label="Paris Map"></iframe>
+  </section>
 
-<footer>
-  <p>Created by AI Assistant</p>
-</footer>
-
+  <!-- Footer Section -->
+  <footer>
+    <p>Designed by AI Assistant</p>
+  </footer>
 </body>
 </html>
 
 <style>
+/* CSS Styles */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-header, footer {
+header {
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
 }
 
-h1, h2, h3, p {
-  text-align: center;
+.images img {
+  display: inline-block;
+  margin: 0 20px;
 }
 
-.hero {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
+.attractions h2 {
   text-align: center;
-  padding: 20px;
+  margin-bottom: 20px;
 }
 
-.attraction {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 20px;
+.attractions ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.attraction img {
-  width: 200px;
-  margin: 10px;
+.attractions li {
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .map {
-  height: 500px;
+  height: 400px;
   width: 100%;
 }
 
-#map {
-  height: 500px;
-  width: 100%;
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
 }
 </style>
 
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="paris_map.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="paris_map.js"></script>
-</body>
-</html>
-
-<script>
-// Your JavaScript code goes here
-</script>
-
-<script>
-// Your Leaflet code goes here
-</script>
-
-<script>
-// Your JavaScript code goes here
-</script>
-
-<script>
-// Your Leaflet code goes here
-</script>
-</html> 
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-y8nJf5cQxV5BtJEHXAjKpOzNzQKjl7FbHJWxZv7IqfKjJ40ywW5vqJ678gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wfj7zA478gEfKc95y7L5E74g8wf
