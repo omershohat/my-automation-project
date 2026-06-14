@@ -4,179 +4,407 @@
 <head>
   <title>Paris Tourism</title>
   <style>
-    /* Style sheet for the tourism landing page */
+    /* CSS Styles */
     
-    /* Image gallery styles */
-    .photo-gallery {
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    
+    /* Global Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    
+    /* Gallery Styles */
+    .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 50px;
+      align-items: center;
+      padding: 50px;
     }
     
-    .photo-gallery img {
-      width: calc(33.33% - 20px);
-      padding: 10px;
-      margin: 10px;
-    }
-    
-    /* Map styles */
-    .map-container {
-      width: 100%;
-      height: 450px;
-      margin-bottom: 50px;
-    }
-    
+    /* Map Styles */
     iframe {
       width: 100%;
       height: 450px;
       border: none;
     }
     
-    /* Attractions styles */
-    .attractions {
+    /* Attractions Styles */
+    .attraction {
+      width: 25%;
+      margin: 20px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Attractions List Styles */
+    .attractions-list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: 50px;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
     
-    .attraction-card {
-      width: calc(30% - 20px);
-      padding: 10px;
-      margin: 10px;
+    /* Carousel Styles */
+    .carousel {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
-  </style>
-</head>
-<body>
-  <h1>Explore Paris</h1>
-  
-  <section class="attractions">
-    <div class="attraction-card">
-      <img src="https://image.ibb.co/fJyJz7/Eiffel_Tower.jpg" alt="Eiffel Tower">
-      <h3>Eiffel Tower</h3>
-      <p>Admire the iconic Eiffel Tower at sunset, and explore its history and architecture.</p>
-    </div>
     
-    <div class="attraction-card">
-      <img src="https://image.ibb.co/fR8nG7/Notre_Dame.jpg" alt="Notre Dame">
-      <h3>Notre-Dame Cathedral</h3>
-      <p>Discover the stunning architecture and history of this UNESCO World Heritage Site.</p>
-    </div>
+    /* Header Styles */
+    .header {
+      display: flex;
+      align-items: center;
+      background-color: #f3f3f3;
+      padding: 50px;
+    }
     
-    <div class="attraction-card">
-      <img src="https://image.ibb.co/gzS4G7/Champs_Elysees.jpg" alt="Champs-Elysees">
-      <h3>Champs-Élysées</h3>
-      <p>Walk down the world-renowned Champs-Élysées avenue, lined with shops, cafes, and cinemas.</p>
-    </div>
-  </section>
-  
-  <section id="map">
-    <h2>Visit Paris</h2>
-    <div class="attraction-card">
-      <img src="https://image.ibb.co/k7LKG7/Montmartre_Montmartre.jpg" alt="Montmartre">
-      <h3>Montmartre</h3>
-      <p>Explore the charming neighborhood of Montmartre, famous for its artists and Sacré-Cœur Basilica.</p>
-    </div>
+    /* Footer Styles */
+    .footer {
+      display: flex;
+      align-items: center;
+      background-color: #f3f3f3;
+      padding: 50px;
+    }
     
-    <div class="attraction-card">
-      <img src="https://image.ibb.co/cC6BG7/Lou_vu_Montmartre.jpg" alt="Louvre">
-      <h3>Louvre Museum</h3>
-      <p>Explore the world-renowned Louvre Museum, home to the Mona Lisa and thousands of other masterpieces.</p>
-    </div>
-  </section>
-  
-  <section id="attractions">
-    <h2>Top Attractions</h2>
-    <div class="attraction-card">
-      <img src="https://image.ibb.co/k7LKG7/Montmartre_Montmartre.jpg" alt="Montmartre">
-      <h3>Montmartre</h3>
-      <p>Explore the charming neighborhood of Montmartre, famous for its artists and Sacré-Cœur Basilica.</p>
-    </div>
+    /* Carousel Styles */
+    .carousel-item {
+      width: 200px;
+      margin: 20px;
+    }
     
-    <div class="attraction-card">
-      <img src="https://image.ibb.co/cC6BG7/Lou_vu_Montmartre.jpg" alt="Louvre">
-      <h3>Louvre Museum</h3>
-      <p>Explore the world-renowned Louvre Museum, home to the Mona Lisa and thousands of other masterpieces.</p>
-    </div>
-  </section>
-</body>
-</html>
+    /* Attractions Styles */
+    .attraction {
+      width: 250px;
+      margin: 20px;
+    }
+    
+    /* Gallery Styles */
+    .gallery-item {
+      width: 200px;
+      margin: 20px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .carousel, .attractions, .gallery {
+        width: 100%;
+      }
+    }
+    
+    /* Typography Styles */
+    h1, h2, p {
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+      padding: 20px;
+    }
+    
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+      }
+    }
+    
+    /* Gallery Styles */
+    .gallery-item {
+      width: 200px;
+      margin: 20px;
+    }
+    
+    /* Attractions Styles */
+    .attraction {
+      width: 250px;
+      margin: 20px;
+    }
+    
+    /* Carousel Styles */
+    .carousel-item {
+      width: 200px;
+      margin: 20px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .carousel, .attractions, .gallery {
+        width: 100%;
+      }
+    }
+    
+    /* Typography Styles */
+    h1 {
+      font-size: 30px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 24px;
+      }
+    }
+    
+    /* Gallery Styles */
+    .gallery-item {
+      width: 200px;
+      margin: 20px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .gallery-item {
+        width: 100%;
+      }
+    }
+    
+    /* Attractions Styles */
+    .attraction {
+      width: 250px;
+      margin: 20px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .attraction {
+        width: 100%;
+     }
+    }
+    
+    /* Carousel Styles */
+    .carousel-item {
+      width: 200px;
+      margin: 20px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .carousel-item {
+        width: 100%;
+     }
+    }
+    
+    /* Typography Styles */
+    h1, h2 {
+      font-size: 24px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      h1, h2 {
+       font-size: 20px;
+    }
+    
+    /* Map Styles */
+    .map {
+      width: 100%;
+     height: 400px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .map {
+        height: 300px;
+    }
+    
+    /* Attractions Styles */
+    .attraction {
+      width: 100%;
+      margin: 20px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .attraction {
+        width: 100%;
+    }
+    
+    /* Footer Styles */
+    .footer {
+        font-size: 16px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .footer {
+        font-size: 14px;
+    }
 ```css
-/* CSS styles for the tourism landing page */
-
-/* Photo gallery styles */
-.photo-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 50px;
+body {
+  background: #fff;
 }
 
-.photo-gallery img {
-  width: calc(33.33% - 20px);
-  padding: 10px;
-  margin: 10px;
-}
-
-/* Attraction card styles */
-.attraction-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.attraction-card img {
-  width: calc(33.33% - 20px);
-  padding: 10px;
-  margin: 10px;
-}
-
-.attraction-card h3 {
-  text-align: center;
-}
-
-.attraction-card p {
-  text-align: center;
-}
-```
-<!-- HTML structure for the tourism landing page -->
+```html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Paris Tourism</title>
-</head>
+<style>
+<title>Paris Tourism</title>
 <body>
-  <header>
-    <h1>Paris</h1>
-  </header>
-  
-  <main>
-    <section class="photo-gallery">
-      <img src="https://image.ibb.co/eZfS7/Paris_Beautiful_View.jpg" alt="Beautiful View of Paris">
-      <img src="https://image.ibb.co/k7LKG7/Paris_Eiffel_Tower.jpg" alt="Eiffel Tower">
-      <img src="https://image.ibb.co/cC6BG7/Paris_Montmartre.jpg" alt="Montmartre">
-    </section>
-    
-    <section id="map">
-      <h2>Explore Paris</h2>
-      <iframe src="https://maps.google.com/maps?embed=1&amp;width=600&amp;height=300&amp;zoom=15&amp;ie=UTF8&amp;iwloc=A&amp;output=embed"></iframe>
-    </section>
-    
-    <section id="attractions">
-      <h2>Top Attractions in Paris</h2>
-      <div class="attraction-card">
-        <h3>Montmartre</h3>
-        <p>Experience the charming neighborhood and its artistic heritage.</p>
-     </div>
-     <div class="attraction-card">
-        <h3>Eiffel Tower</h3>
-        <p>Admire the iconic landmark at night.</p>
-     </div>
-     <div class="attraction-card">
-        <h3>Louvre Museum</h3>
-        <p>Discover the world's largest art museum.</p>
-     </div>
-     <div class="attraction-card">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+<header>
+<h1>Welcome to Paris</h1>
+<main>
+<section class="attractions">
+<section class="attractions">
+<section class="map">
+<section class="map">
+<section class="attractions">
+<section class="attractions">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map"> 
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class="map">
+<section class="attractions">
+<section class
