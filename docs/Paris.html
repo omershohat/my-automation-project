@@ -1,65 +1,88 @@
-```html
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Paris Travel Guide</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 50px;
-    }
-    
-    .gallery img {
-      width: calc(33.33% - 10px);
-      margin: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-    }
-    
-    .map {
-      width: 100%;
-      height: 450px;
-      margin-top: 50px;
-    }
-    
-    .attractions h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    
-    .attractions p {
-      text-align: justify;
-      margin-bottom: 20px;
-    }
-  </style>
+	<title>Paris Tourism</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		
+		.gallery img {
+			width: 30%;
+			margin: 10px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		
+		.map {
+			margin: 20px;
+		}
+		
+		.attractions {
+			margin: 20px;
+		}
+		
+		.attractions h2 {
+			margin-top: 0;
+		}
+		
+		.attraction {
+			margin-bottom: 20px;
+		}
+		
+		.attraction h3 {
+			margin-top: 0;
+		}
+	</style>
 </head>
 <body>
-  <header>
-    <h1>Paris Travel Guide</h1>
-  </header>
-  
-  <main>
-    <section class="gallery">
-      <img src="https://images.unsplash.com/photo-1576876218855-6f4f90c42a5a" alt="Paris Skyline">
-      <img src="https://images.unsplash.com/photo-1547245149962-263d3c689c1f" alt="Eiffel Tower">
-      <img src="https://images.unsplash.com/photo-1559570935996-b4f2e972353d" alt="Seine River">
-    </section>
-    
-    <section class="attractions">
-      <h2>Top Attractions in Paris</h2>
-      <p>Learn about the magic of Paris with its iconic landmarks and rich history.</p>
-      <p>1. Louvre Museum - A must-visit for art lovers.</p>
-      <p>2. Notre-Dame Cathedral - A historic masterpiece.</p>
-      <p>3. Eiffel Tower - A symbol of Paris.</p>
-      <p>4. Champs-Élysées - A popular shopping district.</p>
-      <p>5. Montmartre - A charming neighborhood.</p>
-    </section>
-    
-    <section class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m4!1shttps://www.google.com/maps/embed/v1/place?key=AIzaSyD_I50jXxjJXg!2m4!1e3!2m2!1d59.057922!2d2.304799!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!2b1!1d59.057922!2d2.304799!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m5!1s0x4757a8a7122d095:0x2d6f7c5c2b1a878!2m2!1m4!1s0x4757a8a7122d095:0x2d6f
+	<div class="header">
+		<h1>Paris Tourism</h1>
+	</div>
+	<div class="gallery">
+		<img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzcyMzh8MHwxfHNlYXJjaHwxfHxQYXJpcyUyMGNpdHklMjBsYW5kbWFya3N8ZW58MHwwfHx8MTc4MTQ2MTgyMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Paris City">
+		<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzcyMzh8MHwxfHNlYXJjaHwyfHxQYXJpcyUyMGNpdHklMjBsYW5kbWFya3N8ZW58MHwwfHx8MTc4MTQ2MTgyMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Paris Landmarks">
+		<img src="https://images.unsplash.com/photo-1550340499-a6c60fc8287c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzcyMzh8MHwxfHNlYXJjaHwzfHxQYXJpcyUyMGNpdHklMjBsYW5kbWFya3N8ZW58MHwwfHx8MTc4MTQ2MTgyMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Paris Cityscape">
+	</div>
+	<div class="map">
+		<iframe src="https://maps.google.com/maps?q=Paris&t=&z=13&ie=UTF8&iwloc=&output=embed" style="width: 100%; height: 450px; border: none;"></iframe>
+	</div>
+	<div class="attractions">
+		<h2>Top Attractions in Paris</h2>
+		<div class="attraction">
+			<h3>The Eiffel Tower</h3>
+			<p>The Eiffel Tower is one of the most iconic landmarks in Paris and a must-visit attraction. Built for the 1889 World's Fair, it stands at an impressive 324 meters tall and offers breathtaking views of the city.</p>
+		</div>
+		<div class="attraction">
+			<h3>The Louvre Museum</h3>
+			<p>The Louvre Museum is one of the world's largest and most famous museums, housing an impressive collection of art and artifacts from around the world, including the Mona Lisa. The museum's stunning glass pyramid entrance is a work of art in itself.</p>
+		</div>
+		<div class="attraction">
+			<h3>Notre-Dame Cathedral</h3>
+			<p>Notre-Dame Cathedral is a beautiful and historic church that dates back to the 12th century. Its stunning Gothic architecture and stunning rose windows make it a must-visit attraction in Paris.</p>
+		</div>
+		<div class="attraction">
+			<h3>The Arc de Triomphe</h3>
+			<p>The Arc de Triomphe is a monumental arch that honors the soldiers who fought and died for France. It offers stunning views of the city and is a great spot to watch the sunset.</p>
+		</div>
+		<div class="attraction">
+			<h3>The Seine River</h3>
+			<p>The Seine River runs through the heart of Paris and offers a unique perspective on the city's landmarks and bridges. Take a river cruise or stroll along the riverbank to experience the city's beauty and charm.</p>
+		</div>
+	</div>
+</body>
+</html>
