@@ -7,10 +7,11 @@
 			margin: 0;
 			padding: 0;
 		}
-		.container {
-			max-width: 1200px;
-			margin: 0 auto;
+		.header {
+			background-color: #333;
+			color: #fff;
 			padding: 20px;
+			text-align: center;
 		}
 		.gallery {
 			display: flex;
@@ -19,62 +20,45 @@
 		}
 		.gallery img {
 			width: 30%;
-			height: 200px;
 			margin: 10px;
 			border-radius: 10px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 		}
 		.map {
-			margin-top: 20px;
+			margin: 20px;
 		}
 		.attractions {
-			margin-top: 20px;
-		}
-		.attraction {
-			background-color: #f7f7f7;
+			margin: 20px;
 			padding: 20px;
+			background-color: #f7f7f7;
 			border: 1px solid #ddd;
 			border-radius: 10px;
-			margin-bottom: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		}
-		.attraction h2 {
+		.attractions h2 {
 			margin-top: 0;
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
+	<div class="header">
 		<h1>Paris Tourism</h1>
-		<div class="gallery">
-			<img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzcyMzh8MHwxfHNlYXJjaHwxfHxQYXJpcyUyMGNpdHklMjBsYW5kbWFya3N8ZW58MHwwfHx8MTc4MTQ2MTgyMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Paris Image 1">
-			<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzcyMzh8MHwxfHNlYXJjaHwyfHxQYXJpcyUyMGNpdHklMjBsYW5kbWFya3N8ZW58MHwwfHx8MTc4MTQ2MTgyMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Paris Image 2">
-			<img src="https://images.unsplash.com/photo-1550340499-a6c60fc8287c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzcyMzh8MHwxfHNlYXJjaHwzfHxQYXJpcyUyMGNpdHklMjBsYW5kbWFya3N8ZW58MHwwfHx8MTc4MTQ2MTgyMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Paris Image 3">
-		</div>
-		<div class="map">
-			<iframe src="https://maps.google.com/maps?q=Paris&t=&z=13&ie=UTF8&iwloc=&output=embed" style="width: 100%; height: 450px; border: none;"></iframe>
-		</div>
-		<div class="attractions">
-			<div class="attraction">
-				<h2>The Eiffel Tower</h2>
-				<p>The Eiffel Tower is one of the most iconic landmarks in Paris, standing at 324 meters tall. It was built for the 1889 World's Fair and has since become a symbol of the city. Visitors can take a lift to the top for breathtaking views of the city.</p>
-			</div>
-			<div class="attraction">
-				<h2>The Louvre Museum</h2>
-				<p>The Louvre Museum is one of the world's largest and most famous museums, housing a vast collection of art and artifacts from around the world. The museum is home to the Mona Lisa, as well as many other famous works of art.</p>
-			</div>
-			<div class="attraction">
-				<h2>Notre-Dame Cathedral</h2>
-				<p>Notre-Dame Cathedral is a beautiful and historic church that dates back to the 12th century. It is known for its stunning architecture and beautiful stained glass windows. Visitors can take a tour of the cathedral and climb to the top for views of the city.</p>
-			</div>
-			<div class="attraction">
-				<h2>Montmartre</h2>
-				<p>Montmartre is a charming and historic neighborhood in Paris, known for its narrow streets, charming cafes, and stunning views of the city. Visitors can explore the neighborhood, visit the Sacre-Coeur Basilica, and enjoy the street performers and artists.</p>
-			</div>
-			<div class="attraction">
-				<h2>Champs-Élysées</h2>
-				<p>Champs-Élysées is one of the most famous streets in Paris, known for its upscale shops, cafes, and theaters. Visitors can stroll along the street, visit the Arc de Triomphe, and enjoy the street performers and artists.</p>
-			</div>
-		</div>
+	</div>
+	<div class="gallery">
+		<img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzcyMzh8MHwxfHNlYXJjaHwxfHxQYXJpcyUyMGNpdHklMjBsYW5kbWFya3N8ZW58MHwwfHx8MTc4MTQ2MTgyMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Paris Cityscape">
+		<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzcyMzh8MHwxfHNlYXJjaHwyfHxQYXJpcyUyMGNpdHklMjBsYW5kbWFya3N8ZW58MHwwfHx8MTc4MTQ2MTgyMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Eiffel Tower">
+		<img src="https://images.unsplash.com/photo-1550340499-a6c60fc8287c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NzcyMzh8MHwxfHNlYXJjaHwzfHxQYXJpcyUyMGNpdHklMjBsYW5kbWFya3N8ZW58MHwwfHx8MTc4MTQ2MTgyMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="Louvre Museum">
+	</div>
+	<div class="map">
+		<iframe src="https://maps.google.com/maps?q=Paris&t=&z=13&ie=UTF8&iwloc=&output=embed" style="width: 100%; height: 450px; border: none;"></iframe>
+	</div>
+	<div class="attractions">
+		<h2>Top Attractions in Paris</h2>
+		<p>The Eiffel Tower is one of the most iconic landmarks in Paris, standing at 324 meters tall. Visitors can take a lift to the top for breathtaking views of the city.</p>
+		<p>The Louvre Museum is home to some of the world's most famous artworks, including the Mona Lisa. The museum's stunning glass pyramid entrance is a must-see.</p>
+		<p>Notre-Dame Cathedral is a beautiful and historic church that dates back to the 12th century. Visitors can take a guided tour of the cathedral and climb to the top for stunning views of the city.</p>
+		<p>The Arc de Triomphe is a monumental arch that honors the soldiers who fought and died for France. Visitors can climb to the top for stunning views of the city and explore the surrounding Champs-Élysées.</p>
+		<p>The Seine River is a beautiful and romantic spot for a boat tour or a stroll along the riverbank. Visitors can take in the sights and sounds of the city while enjoying the scenic views.</p>
 	</div>
 </body>
 </html>
