@@ -6,11 +6,11 @@
 			font-family: Arial, sans-serif;
 			margin: 0;
 			padding: 0;
-			background-color: #f0f0f0;
+			background-color: #f2f2f2;
 		}
 		.header {
-			background-color: #333;
-			color: #fff;
+			background-color: #007bff;
+			color: #ffffff;
 			padding: 20px;
 			text-align: center;
 		}
@@ -29,35 +29,34 @@
 			margin: 20px;
 		}
 		.attractions {
-			background-color: #fff;
+			margin: 20px;
 			padding: 20px;
-			border: 1px solid #ddd;
+			background-color: #ffffff;
+			border: 1px solid #dddddd;
 			border-radius: 10px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		}
 		.attractions h2 {
-			color: #333;
+			color: #007bff;
 		}
 		.attractions p {
-			color: #666;
+			color: #666666;
 		}
-		.color1 {
-			background-color: #ff69b4;
-			color: #fff;
-			padding: 10px;
-			border-radius: 10px;
+		.button {
+			background-color: #007bff;
+			color: #ffffff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
 		}
-		.color2 {
-			background-color: #33cc33;
-			color: #fff;
-			padding: 10px;
-			border-radius: 10px;
+		.button:hover {
+			background-color: #0056b3;
 		}
-		.color3 {
-			background-color: #6666ff;
-			color: #fff;
-			padding: 10px;
-			border-radius: 10px;
+		@media only screen and (max-width: 768px) {
+			.gallery img {
+				width: 100%;
+			}
 		}
 	</style>
 </head>
@@ -75,11 +74,11 @@
 	</div>
 	<div class="attractions">
 		<h2>Top Attractions in Paris</h2>
-		<p class="color1">The Eiffel Tower: The iconic symbol of Paris, the Eiffel Tower is a must-visit attraction. Standing at 324 meters tall, it offers breathtaking views of the city.</p>
-		<p class="color2">The Louvre Museum: One of the world's largest and most famous museums, the Louvre is home to an impressive collection of art and artifacts, including the Mona Lisa.</p>
-		<p class="color3">Notre-Dame Cathedral: A beautiful and historic cathedral, Notre-Dame is a masterpiece of Gothic architecture and a popular tourist destination.</p>
-		<p>The Arc de Triomphe: A monumental arch that honors the soldiers who fought and died for France, the Arc de Triomphe is a symbol of French history and culture.</p>
-		<p>The Seine River: A scenic river that runs through the heart of Paris, the Seine River offers stunning views of the city and is a popular spot for boat cruises and walking tours.</p>
+		<p>The Eiffel Tower is one of the most iconic landmarks in Paris, standing at 324 meters tall. It was built for the 1889 World's Fair and has become a symbol of the city.</p>
+		<p>The Louvre Museum is one of the world's largest and most famous museums, housing a vast collection of art and artifacts from around the world, including the Mona Lisa.</p>
+		<p>Notre-Dame Cathedral is a beautiful and historic church that was built in the 12th century. It is one of the most famous and visited landmarks in Paris, known for its stunning architecture and beautiful stained glass windows.</p>
+		<p>The Arc de Triomphe is a monumental arch that honors the soldiers who fought and died for France. It is located in the center of the city and offers stunning views of the surrounding area.</p>
+		<button class="button">Learn More</button>
 	</div>
 </body>
 </html>
